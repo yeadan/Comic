@@ -13,7 +13,7 @@ export class ComicService {
     const header = new HttpHeaders().set('content-type', 'application/json');
     let a = 'https://xkcd.com/';
     //Utilizamos la ruta api generado en la conf. del proxy para CORS
-    return this.http.get<any>('https://xkcd.com/' + id + '/info.0.json', {
+    return this.http.get<any>('https://xkcd.vercel.app/?comic=' + id, {
       headers: header,
     });
   }
