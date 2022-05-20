@@ -18,7 +18,7 @@ export class ComicService {
       );
     let a = 'https://xkcd.com/';
     //Utilizamos la ruta api generado en la conf. del proxy para CORS
-    return this.http.get<any>('https://xkcd.com/' + id + '/info.0.json', {
+    return this.http.get<any>('api/' + id + '/info.0.json', {
       headers: header,
     });
   }
