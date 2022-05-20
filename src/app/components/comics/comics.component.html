@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Random comics</h1>
+  <ul class="list-group">
+    <a *ngFor="let page of comic" [routerLink]="['/comic',page.num]"
+      class="list-group-item list-group-item-action animate__animated animate__bounce animate__fadeIn">
+      {{page.num}} - {{page.title}}
+    </a>
+  </ul>
+</div>
