@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/api"
+  from = " https://comic-angular.netlify.app/api"
   to = "https://xkcd.com"
   status = 200
   force = true
