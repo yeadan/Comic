@@ -1,1 +1,13 @@
-<p>person works!</p>
+<div class="container mt-5">
+  <div *ngIf="comic" class="row animate__animated animate__bounce animate__fadeIn">
+    <div class="col-md-9">
+      <p><strong>Identifier:</strong> {{comic.num}}</p>
+      <p><strong>Title:</strong> {{comic.title}}</p>
+      <p><strong>Date:</strong> {{comic.year}} - {{comic.month}} - {{comic.day}}</p>
+      <img style="width: 80%; height: 80%;" class="rounded" src="{{comic.img}}" alt="">
+    </div>
+    <div class="col-md-3">
+      <a class="btn btn-danger" routerLink="/">Back</a>
+    </div>
+  </div>
+</div>

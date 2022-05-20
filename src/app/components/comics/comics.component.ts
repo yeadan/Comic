@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Xkcd } from 'src/app/models/person.interface';
-import { comicService } from 'src/app/services/comics.service';
+import { ComicService } from 'src/app/services/comics.service';
 
 @Component({
   selector: 'app-comic',
@@ -15,9 +15,10 @@ export class comicComponent implements OnInit {
     year: '',
     img: '',
     title: '',
+    day: '',
   };
 
-  constructor(private comicService: comicService) {}
+  constructor(private comicService: ComicService) {}
 
   ngOnInit(): void {
     //Utilizaremos los numeros de 100 a 129
@@ -29,6 +30,7 @@ export class comicComponent implements OnInit {
           month: comic.month,
           year: comic.year,
           title: comic.title,
+          day: comic.day,
         };
         this.comic.push(this.xkcd);
       });

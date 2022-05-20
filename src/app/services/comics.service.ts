@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class comicService {
+export class ComicService {
   constructor(private http: HttpClient) {}
 
   //Utilizaremos Observable<any> porque después construiremos el objeto
