@@ -10,15 +10,10 @@ export class ComicService {
 
   //Utilizaremos Observable<any> porque después construiremos el objeto
   getcomics(id: number): Observable<any> {
-    const header = new HttpHeaders()
-      .set('Access-Control-Allow-Origin', '*')
-      .set(
-        'Access-Control-Allow-Methods',
-        'GET, POST, PUT, DELETE, PATCH, OPTIONS'
-      );
+    const header = new HttpHeaders().set('content-type', 'application/json');
     let a = 'https://xkcd.com/';
     //Utilizamos la ruta api generado en la conf. del proxy para CORS
-    return this.http.get<any>('api/' + id + '/info.0.json', {
+    return this.http.get<any>('https://xkcd.com/' + id + '/info.0.json', {
       headers: header,
     });
   }
