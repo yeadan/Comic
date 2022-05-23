@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { comicComponent } from './components/comics/comics.component';
-import { JokeComponent } from './components/joke/joke.component';
+import { countriesComponent } from './components/countries/countries.component';
+import { CountryComponent } from './components/country/country.component';
 
 const routes: Routes = [
-  { path: '', component: comicComponent },
-  { path: 'comic/:id', component: JokeComponent },
-  { path: '**', component: comicComponent },
+  { path: '', component: countriesComponent },
+  { path: 'country/:id', component: CountryComponent },
+  { path: '**', component: countriesComponent },
 ];
 
 @NgModule({

@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <div *ngIf="country" class="row animate__animated animate__bounce animate__fadeIn">
+    <h1>{{country.cca3}}</h1>
+    <div class="col-md-9">
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <p><strong>Common Name:</strong> {{country.name.common}}</p>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{panelOpenState ? '' : 'show all details'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p><strong>Official Name:</strong> {{country.name.official}}</p>
+        <p *ngIf="country.population>10000"><strong>Population:</strong> {{(country.population/1000000).toFixed(2)}}
+          millions</p>
+        <p *ngIf="country.population<=10000"><strong>Population:</strong> {{country.population}} people</p>
+        <p><strong>Capital:</strong> {{country.capital}}</p>
+        <img style="width: 80%; height: 80%;border:1px solid" class="rounded" src="{{country.flags.png}}" alt="flag">
+      </mat-expansion-panel>
+    </div>
+    <div class="col-md-3">
+      <a class="btn btn-danger" routerLink="/">Back</a>
+    </div>
+  </div>
+</div>
+<mat-progress-spinner [@fade] *ngIf="spinner === true" [mode]="'indeterminate'"></mat-progress-spinner>

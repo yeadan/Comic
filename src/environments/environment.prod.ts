@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
   backend: {
-    baseURL: 'https://xkcd.com',
+    baseURL: 'https://restcountries.com',
   },
 };

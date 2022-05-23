@@ -1,11 +1,11 @@
 <mat-progress-spinner [@fade] *ngIf="spinner === true" [mode]="'indeterminate'"></mat-progress-spinner>
 
 <div class="container">
-  <h1>Random comics</h1>
+  <h1>Lands with Euro(€)</h1>
   <ul class="list-group">
-    <a *ngFor="let page of comic" [routerLink]="['/comic',page.num]"
+    <a *ngFor="let page of countries" [routerLink]="['/country',page.name.common]"
       class="list-group-item list-group-item-action animate__animated animate__bounce animate__fadeIn">
-      {{page.num}} - {{page.title}}
+      {{page.cca3}} - {{page.name.common}}
     </a>
   </ul>
 </div>

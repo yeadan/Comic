@@ -32,15 +32,15 @@
   ],
   "dataGroups": [
     {
-      "name": "comic-api",
+      "name": "country-api",
       "urls": [
-        "https://xkcd.com//**"
+        "https://restcountries.com/**"
       ],
       "cacheConfig": {
-        "maxSize": 20,
-        "maxAge": "3h",
-        "timeout": "1s",
-        "strategy": "freshness"
+        "maxSize": 10,
+        "maxAge": "1h",
+        "timeout": "2s",
+        "strategy": "performance"
       }
     }
   ]
