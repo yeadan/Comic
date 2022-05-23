@@ -5,6 +5,9 @@
  *
  * Copyright (c) 2020 Animate.css
  */
+  li {
+    list-style: none;
+  }
  mat-progress-spinner {
   position: absolute !important;
   top: 50%;

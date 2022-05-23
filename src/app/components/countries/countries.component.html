@@ -2,10 +2,10 @@
 
 <div class="container">
   <h1>Lands with Euro(€)</h1>
-  <ul class="list-group">
-    <a *ngFor="let page of countries" [routerLink]="['/country',page.name.common]"
-      class="list-group-item list-group-item-action animate__animated animate__bounce animate__fadeIn">
-      {{page.cca3}} - {{page.name.common}}
-    </a>
+  <ul class="list-group" *ngFor="let page of countries">
+    <li><a [routerLink]="['/country',page.name.common]"
+        class="list-group-item list-group-item-action animate__animated animate__bounce animate__fadeIn">
+        {{page.cca3}} - {{page.name.common}}
+      </a></li>
   </ul>
 </div>
