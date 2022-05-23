@@ -37,8 +37,8 @@
         "https://restcountries.com/**"
       ],
       "cacheConfig": {
-        "maxSize": 10,
-        "maxAge": "1h",
+        "maxSize": 20,
+        "maxAge": "12h",
         "timeout": "2s",
         "strategy": "performance"
       }
