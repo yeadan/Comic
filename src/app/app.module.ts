@@ -14,7 +14,7 @@ import { CountryComponent } from './components/country/country.component';
 @NgModule({
   declarations: [AppComponent, countriesComponent, CountryComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     MatProgressSpinnerModule,
