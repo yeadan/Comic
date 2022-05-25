@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "build": "ng build --outputHashing=all",
+    "build": "ng build --outputHashing=all && ng run PEC5:server",
+    "build:simple": "ng build --outputHashing=all",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run PEC5:serve-ssr",
