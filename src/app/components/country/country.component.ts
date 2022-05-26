@@ -28,16 +28,16 @@ export class CountryComponent implements OnInit {
     this.spinner = true;
     const identifier = this.activatedRoute.snapshot.paramMap.get('id');
     console.log('Identifier --> ', identifier);
-    this.countriesservice.getCountryByName(identifier!).subscribe(
-      (result) => {
+    this.countriesservice.getCountryByName(identifier!).subscribe({
+      next: (result) => {
         this.country = result[0];
         console.log('Country --> ', this.country);
         this.spinner = false;
       },
-      (error) => {
+      error: (error) => {
         console.error(error);
         this.spinner = false;
-      }
-    );
+      },
+    });
   }
 }

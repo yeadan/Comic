@@ -31,20 +31,6 @@ export class countriesComponent implements OnInit {
         console.error(error);
         this.spinner = false;
       },
-    }); /*
-    this.countriesservice.getcountries().subscribe({
-    next: (v) => console.log(v),
-    error: (e) => console.error(e),
-    })
-      (result) => {
-        this.countries = result;
-        this.spinner = false;
-        console.log(this.countries);
-      },
-      (error) => {
-        console.error(error);
-        this.spinner = false;
-      }
-    );*/
+    });
   }
 }
