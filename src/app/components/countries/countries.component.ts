@@ -21,7 +21,21 @@ export class countriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.spinner = true;
-    this.countriesservice.getcountries().subscribe(
+    this.countriesservice.getcountries().subscribe({
+      next: (result) => {
+        this.countries = result;
+        this.spinner = false;
+        console.log(this.countries);
+      },
+      error: (error) => {
+        console.error(error);
+        this.spinner = false;
+      },
+    }); /*
+    this.countriesservice.getcountries().subscribe({
+    next: (v) => console.log(v),
+    error: (e) => console.error(e),
+    })
       (result) => {
         this.countries = result;
         this.spinner = false;
@@ -31,6 +45,6 @@ export class countriesComponent implements OnInit {
         console.error(error);
         this.spinner = false;
       }
-    );
+    );*/
   }
 }
